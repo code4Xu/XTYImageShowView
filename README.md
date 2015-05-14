@@ -19,4 +19,6 @@
  *
  *  @param index delete image index
  */
+
+
 -(void)XTYImageShowViewDeleteButtonClickWithImageIndex:(NSInteger)index;
