@@ -11,29 +11,30 @@
 @protocol XTYImageShowViewDelegate <NSObject>
 @required
 /**
- *  删除图片回调
+ *  when delete button clicked
  *
- *  @param index 返回图片下标
+ *  @param index The current image index
  */
 -(void)XTYImageShowViewDeleteButtonClickWithImageIndex:(NSInteger)index;
 @end
 /**
- *  图片查看器
+ *  imagesShow
  */
 @interface XTYImageShowView : UIView
 @property(weak,nonatomic)id<XTYImageShowViewDelegate>delegate;
 /**
- *  返回imageShowView实例
+ *  singleton
  *
  *  @return XTYImageShowView
  */
 +(XTYImageShowView *)shareXTYImageShowView;
 /**
- *  显示图片查看器
+ *  show imagesWithScorll
  *
- *  @param images      图片数组
- *  @param clickNumber 当前图片下标
- *  @param allow 允许删除
+ *  @param images       images array
+ *  @param index        curren image index
+ *  @param isAllow      if allow is Yes ,allow delete image. Need to achieve
+ -(void)XTYImageShowViewDeleteButtonClickWithImageIndex:(NSInteger)index;
  */
-+(void)showWithImages:(NSArray *)images andCurrenIndex:(NSInteger)index allowDelete:(BOOL)allow;
++(void)showWithImages:(NSArray *)images andCurrenIndex:(NSInteger)index allowDelete:(BOOL)isAllow;
 @end

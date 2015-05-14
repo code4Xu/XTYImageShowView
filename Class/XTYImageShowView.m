@@ -28,7 +28,7 @@
 {
     NSLog(@"%d",buttonIndex);
     if (!buttonIndex) {
-        //删除
+        //delete
         [self deleteImage];
     }
 }
@@ -60,7 +60,7 @@
         
     }else
     {
-        NSLog(@"%@\n请指定delegate,并实现deleteButtonClickWithImageIndex:代理方法",[self class]);
+        NSLog(@"%@\n No appoint delegate,and achieve\n -deleteButtonClickWithImageIndex:\n methor",[self class]);
     }
 }
 
@@ -85,7 +85,7 @@
 }
 -(void)deleteButtonClicked
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"要删除这张照片吗?" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"删除" otherButtonTitles:nil, nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Do you want to delete this photo?" delegate:self cancelButtonTitle:@"cancle" destructiveButtonTitle:@"ok" otherButtonTitles:nil, nil];
     [actionSheet showInView:self];
 }
 -(void)initViewAllowDelete:(BOOL)allow
@@ -136,11 +136,11 @@
     [XTYImageShowView shareXTYImageShowView].overlayView = nil;
 
 }
-+(void)showWithImages:(NSArray *)images andCurrenIndex:(NSInteger)index allowDelete:(BOOL)allow
++(void)showWithImages:(NSArray *)images andCurrenIndex:(NSInteger)index allowDelete:(BOOL)isAllow
 {
     [XTYImageShowView shareXTYImageShowView].imageArrs = [NSMutableArray arrayWithArray:images];
     [XTYImageShowView shareXTYImageShowView].currenNumber = index;
-    [[XTYImageShowView shareXTYImageShowView]initViewAllowDelete:allow];
+    [[XTYImageShowView shareXTYImageShowView]initViewAllowDelete:isAllow];
     [[XTYImageShowView shareXTYImageShowView]show];
 }
 - (UIControl *)overlayView {

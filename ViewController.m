@@ -13,10 +13,10 @@
 @end
 
 @implementation ViewController
+
 -(void)XTYImageShowViewDeleteButtonClickWithImageIndex:(NSInteger)index
 {
-    NSLog(@"删除%d",index);
-//这里进行删除图片后的相关操作
+    NSLog(@"delete%d",index);
 }
 -(void)showImageManage
 {
@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [button setTitle:@"点击" forState:UIControlStateNormal];
+    [button setTitle:@"clickME" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(showImageManage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
