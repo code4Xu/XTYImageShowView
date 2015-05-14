@@ -1,19 +1,19 @@
 # XTYImageShowView
 
-导入#import "XTYImageShowView.h"
+#import "XTYImageShowView.h"
 /**
- *  显示图片查看器
+ *  Picture browsing
  *
- *  @param images      图片数组
- *  @param clickNumber 当前图片下标
- *  @param allow 允许删除
+ *  @param images      images array
+ *  @param clickNumber current image index
+ *  @param allow allow delete
  */
  [XTYImageShowView showWithImages:images andCurrenIndex:0 allowDelete:YES];
  
- 如果allowDelete = YES  需要实现delegate
+ if allowDelete = YES  need achieve delegate
  /**
- *  删除图片回调
+ *  delete button click
  *
- *  @param index 返回图片下标
+ *  @param index delete image index
  */
 -(void)XTYImageShowViewDeleteButtonClickWithImageIndex:(NSInteger)index;
