@@ -1,6 +1,8 @@
 # XTYImageShowView
 
 #import "XTYImageShowView.h"
+
+
 /**
  *  Picture browsing
  *
@@ -14,6 +16,7 @@
  [XTYImageShowView showWithImages:images andCurrenIndex:0 allowDelete:YES];
  
  if allowDelete = YES  need achieve delegate
+ 
  /**
  *  delete button click
  *
