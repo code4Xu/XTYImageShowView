@@ -8,6 +8,9 @@
  *  @param clickNumber current image index
  *  @param allow allow delete
  */
+
+
+
  [XTYImageShowView showWithImages:images andCurrenIndex:0 allowDelete:YES];
  
  if allowDelete = YES  need achieve delegate
